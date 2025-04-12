@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade01 - Imagens</title>
+    <meta name="description" content="Uma página de exemplo para demonstrar a estrutura básica do HTML5.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        img.w800 {
+            width: 800px;
+        }
+
+        img.w800 {
+            height: 800px;
+        }
+
+        figure {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 30px;
+            border: 2px solid black;
+        }
+        
+        img.w300-redonda {
+            width: 300px;
+            height: auto;
+            clip-path: circle(50%);
+        }
+
+        img.wmax {
+            max-width: 100%;
+            height: auto;
+               
+        }
+
+        header {
+            background:linear-gradient(135deg, rgb(255, 136, 25), rgb(255, 225, 142));
+            padding: 50px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, white, rgb(255, 203, 135));
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        p {
+            color: rgb(36, 0, 0);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .caixa{
+            background-color: white;
+            border: 3px dashed rgb(209, 129, 9);
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+
+        
+
+    </style>
+</head>
+<body>
+ 
+    <header>
+        <h1>Aula 02 - Imagens - Parte 1</h1>
+        
+    </header>
+    
+    <main>
+        <section id="section1">
+
+            <h1>Seção 1: Introdução</h2>
+                <p>
+                    Esta é a primeira seção da página. <br>
+                    Aqui você pode adicionar informações introdutorias.
+                </p>
+
+                <div class="caixa"></div>
+
+                <img src="img/bird-8450958_1920.png" 
+                    alt="Por do sol"
+                    width="800px">
+
+        </section>
+
+        <section id="section2">
+
+            <h1>Imagem com 300px de largura</h2>
+                <img src="img/mountains-3324569_1920.jpg" 
+                    alt="Por do sol"
+                    class="w800">
+
+        </section>
+
+        <figure>
+            <img src="img/paisagem-original.jpg" 
+                alt="Por do sol"
+                class= "w800">
+            <figcaption> 
+                Paisagem - Imagem por Luis Rodrigo
+            </figcaption>
+
+        </figure>
+
+        <figure>
+            <img src="img/paisagem-original.jpg" 
+                alt="Por do sol"
+                class="w300-redonda">
+            <figcaption> 
+                Paisagem - Imagem por Luis Rodrigo
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="img/paisagem-original.jpg" 
+                alt="Por do sol"
+                class="wmax">
+            <figcaption> 
+                Paisagem - Imagem por Luis Rodrigo
+            </figcaption>
+        </figure>
+
+    </main> 
+
+    <footer id="footer">
+        <p>&copy; 2025 - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
