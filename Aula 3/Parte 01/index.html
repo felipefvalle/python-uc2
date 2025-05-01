@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recursos Multimídia com HTML5</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    audio, video {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+      background-color: #f0f0f0;
+    }
+
+    audio:hover, video:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .video-container {
+      background-color: #000;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .mapa {
+      width: 100%;
+      max-width: 1000px;
+      margin: 30px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .mapa:hover {
+      transform: scale(1.01);
+    }
+
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 600px) {
+      iframe {
+        height: 300px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  
+    <section class="container">
+        <h1>Aula 03 - Multimídia</h1>
+
+    <!-- Áudio Público -->
+
+    <h2>Áudio</h2>
+    <audio controls>
+      <source src="https://cdn.pixabay.com/download/audio/2025/04/04/audio_588416cc0f.mp3?filename=gentle-instrumental-1-322812.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio HTML5.
+    </audio>
+
+    <!-- Vídeo Público -->
+
+    <h2>Vídeo</h2>
+    <section class="video-container">
+      <video controls preload="metadata">
+        <source src="https://archive.org/download/ElephantsDream/ed_hd.mp4" type="video/mp4">
+        <source src="https://download.blender.org/durian/trailer/sintel_trailer-480p.webm" type="video/webm">
+        <track src="https://raw.githubusercontent.com/thiagolunardi/legendas/master/elephantsdream-pt.vtt" kind="subtitles" srclang="pt" label="Português">
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </section>
+
+    <!-- Mapa Público (Torre Eiffel) -->
+
+    <h2>Mapa Torre Eiffel</h2>
+    <section class="mapa">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991440608207!2d2.292292615509614!3d48.858373608662095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTorre%20Eiffel!5e0!3m2!1spt-BR!2sbr!4v1713123456789!5m2!1spt-BR!2sbr" 
+        allowfullscreen 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+
+   <!--  Mapa (Senac) -->
+     
+    <h2>Mapa Senac</h2>
+    <section class="mapa">
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.9850154773835!2d-43.186362625769405!3d-22.504745379540054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x990807c6be3cdf%3A0xff1d91bdbb7ca9fb!2sSenac%20Petr%C3%B3polis!5e0!3m2!1spt-BR!2sbr!4v1745986383910!5m2!1spt-BR!2sbr" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" l
+        oading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    </section>
+
+    <footer id="footer" class="container text-center">
+      <p class="text-muted"><i class="far fa-copyright icon"></i> Felipe Valle 2025 - Todos os direitos reservados.</p>
+  </footer>
+    
+</body>
+</html>

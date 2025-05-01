@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explorando a Tag &lt;a&gt; em HTML</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fdfdfd;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    a {
+      color: #2E86C1;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #E74C3C;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #7D3C98;
+    }
+
+    a:active {
+      color: #F1C40F;
+    }
+
+    a:focus {
+      outline: 2px solid #3498DB;
+    }
+
+    .botao {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498DB;
+      color: white !important;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .botao:hover {
+      background-color: #2980B9;
+    }
+
+    .icone {
+      margin-right: 6px;
+    }
+
+    code {
+      background-color: #eef;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .bloco {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-left: 5px solid #3498DB;
+      margin-bottom: 20px;
+    }
+
+    .bloco p {
+      margin: 8px 0;
+    }
+
+    .ancora-exemplo {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .botao {
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Usando a Tag &lt;a&gt; (Âncora) no HTML5</h1>
+
+    <!-- Seção 1 -->
+    <section>
+      <h2>1. Exemplos de Uso</h2>
+      <div class="ancora-exemplo">
+        <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-globe icone"></i>Visitar Exemplo
+        </a>
+
+        <a href="#secao2">
+          <i class="fas fa-arrow-down icone"></i>Ir para Seção 2
+        </a>
+
+        <a href="mailto:contato@exemplo.com">
+          <i class="fas fa-envelope icone"></i>Enviar Email
+        </a>
+
+        <a href="tel:+5511999999999">
+          <i class="fas fa-phone icone"></i>Ligar para Nós
+        </a>
+
+        <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" download>
+          <i class="fas fa-file-download icone"></i>Baixar Manual (PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <hr>
+      <p style="text-align:center; font-size: 0.9rem; color: #777;"><i class="far fa-copyright icon"></i> 
+        Felipe Valle - Todos os direitos reservados.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

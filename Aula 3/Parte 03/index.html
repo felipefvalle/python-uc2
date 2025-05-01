@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uc2Blog</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+
+    <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .sidebar-card {
+            border: none;
+            
+        }
+
+        body {
+            background: linear-gradient(135deg, #d4d4d4, #3d31303a);
+        }
+
+        .main-content {
+            margin-top: 30px;
+        }
+
+
+        .navbar-custom {
+            background: linear-gradient(135deg, #182E59, #069DBF);
+            padding-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 2, 0.3);
+        }
+
+        .navbar-nav .nav-link {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="#"> Uc2Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><i class="fas fa-home"></i> </a>
+                </li>
+                <!-- Sobre -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-user"></i> </a>
+                </li>
+                <!-- Contato -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-envelope"></i> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Conteúdo Principal -->
+
+<div class="container main-content">
+    <div class="row g-4">
+        <!-- Posts -->
+        <div class="col-lg-8">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <!-- Post 1 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imgs/camera.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Imagens na Web: <br> Quando usar PNG, JPEG, SVG e WebP</h5>
+                            <p class="card-text text-muted small">Publicado em 01/01/2025 por Arthur Pereira</p>
+                            <p class="card-text">Qual formato de imagem usar em cada tipo de conteúdo? Um guia definitivo foi feito...</p>
+                            <a href="#" class="btn btn-primary">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imgs/codigo.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Dark Mode com CSS: <br> Implementando tema claro/escuro no seu site</h5>
+                            <p class="card-text text-muted small">Publicado em 02/01/2025 por Vitor Gomes</p>
+                            <p class="card-text">Dark mode não é só estética. Entenda o impacto na usabilidade e acessibilidade...</p>
+                            <a href="#" class="btn btn-primary">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imgs/site.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Checklist de front-end: <br> O que revisar antes de subir seu site</h5>
+                            <p class="card-text text-muted small">Publicado em 03/01/2025 por Autor</p>
+                            <p class="card-text">Foco técnico com exemplos de código que precisam ser limpos/refatorados...</p>
+                            <a href="#" class="btn btn-primary">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="imgs/github.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Introdução ao Git e GitHub para desenvolvedores front-end</h5>
+                            <p class="card-text text-muted small">Publicado em 03/01/2025 por Autor</p>
+                            <p class="card-text">Contexto rápido: Por que front-end devs também precisam dominar Git...</p>
+                            <a href="#" class="btn btn-primary">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paginação -->
+            <nav class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Próxima</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <div class="card sidebar-card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Pesquisar</h5>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Digite aqui...">
+                        <button class="btn btn-primary" type="button">Buscar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card sidebar-card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Categorias</h5>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">Tecnologia</a>
+                        <a href="#" class="list-group-item list-group-item-action">Programação</a>
+                        <a href="#" class="list-group-item list-group-item-action">Design</a>
+                        <a href="#" class="list-group-item list-group-item-action">Carreira</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card sidebar-card">
+                <div class="card-body">
+                    <h5 class="card-title">Posts Recentes</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <a href="#" class="text-decoration-none">Imagens Web</a>
+                            <p class="small text-muted mb-0">01/01/2025</p>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#" class="text-decoration-none">Dark Mode CSS</a>
+                            <p class="small text-muted mb-0">02/01/2025</p>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none">Chelist FrontEnd</a>
+                            <p class="small text-muted mb-0">03/01/2025</p>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none">Git e Github</a>
+                            <p class="small text-muted mb-0">03/01/2025</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white mt-5">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Sobre Nós</h5>
+                <p class="small">O Uc2Blog nasceu da vontade de compartilhar conhecimento prático e atualizado sobre o mundo do front-end — desde HTML, CSS e JavaScript até frameworks modernos, performance, design responsivo e boas práticas de acessibilidade.</p>
+            </div>
+
+
+
+
+
+
+
+            <div class="col-md-3">
+                <h5>Redes Sociais</h5>
+                <ul class="list-unstyled small">
+                    <li>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-instagram me-2"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                    <li>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-facebook me-2"></i> Facebook
+                        </a>
+                    </li>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-github me-2"></i> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fab fa-x-twitter me-2"></i>
+                            X
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        <div class="text-center mt-3 pt-3 border-top">
+            <p class="small mb-0">&copy; 2025 Uc2Blog - Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
