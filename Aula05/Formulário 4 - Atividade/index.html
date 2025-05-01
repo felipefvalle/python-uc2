@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Estrutura HTML5 com Bootstrap e Font Awesome</title>
+    <meta name="description" content="Uma página de exemplo para demonstrar a estrutura básica do HTML5 com Bootstrap e Font Awesome.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados (opcional) -->
+    <style>
+        body {
+            padding: 20px;
+        }
+        header {
+            margin-bottom: 20px;
+            
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            background-color: #f8f9fa;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="h1">
+                <i class="fa-solid fa-user"></i>
+                </i>Cadastro</h1>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="container">
+        <section id="section1" class="mb-5">
+            <form action="/cadastro" method="POST" target="_blank">
+                
+                <!-- Nome do Usuario -->
+
+                <div class="row">
+                    
+                    <div class="col-6">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" name="nome" id="nome" >
+
+                    </div>
+
+                    <!-- Email do Usuario -->
+    
+                    <div class="mb-3 col-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+
+                    <!-- Senha do Usuario -->
+                    
+                    <div class="mb-3 col-6">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="email" name="email">
+                    </div>
+
+                    <!-- Confirmar Senha do Usuario -->
+
+                    <div class="mb-3 col-6">
+                        <label for="senha" class="form-label">Confirmar Senha</label>
+                        <input type="password" class="form-control" id="email" name="email">
+                    </div>
+
+                    <!-- Telefone do Usuario -->
+
+                    <div class="mb-3 col-6">
+                        <label for="telefone" class="form-label" >Telefone</label>
+                        <input type="tel" class="form-control" name="telefone" id="telefone" pattern="[0-9]{11}" title="DDD + Número (apenas dígitos)">
+                    </div>
+
+                    <!-- Data de Nascimento do Usuario -->
+
+                    <div class="mb-3 col-6">
+                        <label for="data" class="form-label">Data de Nascimento</label>
+                        <input type="date" class="form-control" id="data" name="data" placeholder="dd/mm/aaaa">
+                    </div>
+
+                    <!-- Endereço do Usuario -->
+
+                    <div class="mb-3 row">
+                        
+                        <div class="col-3">
+                            
+                            <label for="cep" class="form-label">CEP</label>
+                            <input type="number" class="form-control" name="cep" id="cep">
+                        </div>
+
+                        <div class="mb-2 col-6">
+                                <label for="endereco" class="form-label" >Rua</label>
+                                <input type="text" class="form-control" name="endereco" id="telefone">
+                        </div>
+
+                        <div class="mb-2 col-5">
+                                <label for="endereco" class="form-label" >Bairro</label>
+                                <input type="text" class="form-control" name="endereco" id="telefone">
+                        </div>
+
+                        <div class="mb-2 col-3">
+                            <label for="cidade" class="form-label">Cidade</label>
+                            <input type="text" class="form-control" name="cidade" id="cidade">
+                        </div>
+
+                        <div class="col-3">
+                            <label for="estado" class="form-label">Estado</label>
+                            <input type="text" class="form-control" name="estado" id="estado">
+                        </div>
+
+                        <div class="col-3">
+                            <label for="numero" class="form-label">Número</label>
+                            <input type="number" class="form-control" name="numero" id="numero">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="bairro" class="form-label">Complemento</label>
+                            <input type="text" class="form-control" name="bairro" id="bairro">
+                        </div>
+
+                        </div>
+
+                    <!-- CPF do Usuario -->
+
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label" >CPF</label>
+                        <input type="number" class="form-control" name="cpf" id="cpf" pattern="" title="000.000.000-00">
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+                <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+
+            </form>
+
+
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+
+    <footer id="footer" class="container text-center">
+        <p class="text-muted"><i class="far fa-copyright icon"></i> Felipe Valle 2025 - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS e dependências -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
