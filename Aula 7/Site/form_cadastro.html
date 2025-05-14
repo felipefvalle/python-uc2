@@ -64,6 +64,87 @@
 
         }
 
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        /* Fieldsets */
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: #fff;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 0 10px;
+        }
+
+        /* Formulário */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        /* Radio e Checkbox */
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        /* Botão */
+        button[type="submit"] {
+            background-color: #0d6efd;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #084298;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            background-color: #e9ecef;
+            color: #6c757d;
+        }
+
+        section {
+            text-align: center;
+            font-size: 2.5rem;
+
+        }
+
 
 
     </style>
@@ -130,6 +211,137 @@
 
     <!-- Main -->
     <main>
+        
+           <!-- Cabeçalho -->
+    <section class="container">
+        <h1>Cadastro de Cliente</h1>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <main class="container">
+        <form action="/cadastro" method="POST" enctype="multipart/form-data">
+
+            <!-- Dados pessoais (2 colunas) -->
+            <fieldset class="mb-4 p-3 bg-white rounded">
+                <legend>Dados Pessoais</legend>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nome" class="form-label">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">E-mail:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="data-nascimento" class="form-label">Data de Nascimento:</label>
+                        <input type="date" id="data-nascimento" name="data_nascimento" class="form-control" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="cor-favorita" class="form-label">Cor Favorita:</label>
+                        <input type="color" id="cor-favorita" name="cor_favorita" class="form-control form-control-color" value="#ff0000">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label d-block">Gênero:</label>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" id="masculino" name="genero" value="M" class="form-check-input" checked>
+                            <label for="masculino" class="form-check-label">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" id="feminino" name="genero" value="F" class="form-check-input">
+                            <label for="feminino" class="form-check-label">Feminino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" id="outro" name="genero" value="O" class="form-check-input">
+                            <label for="outro" class="form-check-label">Outro</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" id="nb" name="nb" value="O" class="form-check-input">
+                            <label for="nb" class="form-check-label">Não Binário</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Endereço (2 colunas) -->
+            <fieldset class="mb-4 p-3 bg-white rounded">
+                <legend>Endereço</legend>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="estado" class="form-label">Estado:</label>
+                        <select id="estado" name="estado" class="form-control" required>
+                            <option value="">Selecione...</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="cidade" class="form-label">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" class="form-control" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Preferências (3 colunas) -->
+            <fieldset class="mb-4 p-3 bg-white rounded">
+                <legend>Preferências</legend>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Interesses:</label><br>
+                        <div class="form-check">
+                            <input type="checkbox" id="esportes" name="interesses[]" value="esportes" class="form-check-input">
+                            <label for="esportes" class="form-check-label">Esportes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="musica" name="interesses[]" value="musica" class="form-check-input">
+                            <label for="musica" class="form-check-label">Música</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="viagens" name="interesses[]" value="viagens" class="form-check-input">
+                            <label for="viagens" class="form-check-label">Viagens</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label for="newsletter" class="form-label">Deseja receber newsletter?</label><br>
+                        <input type="checkbox" id="newsletter" name="newsletter" value="1" checked class="form-check-input">
+                        <label for="newsletter" class="form-check-label">Sim</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Documentos (2 colunas) -->
+            <fieldset class="mb-4 p-3 bg-white rounded">
+                <legend>Documentos</legend>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="foto" class="form-label">Foto do Perfil:</label>
+                        <input type="file" id="foto" name="foto" accept="image/*" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="curriculo" class="form-label">Currículo (PDF):</label>
+                        <input type="file" id="curriculo" name="curriculo" accept=".pdf" class="form-control">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Observações (linha inteira) -->
+            <div class="mb-3">
+                <label for="observacoes" class="form-label">Observações:</label>
+                <textarea id="observacoes" name="observacoes" rows="4" class="form-control"
+                          placeholder="Alguma observação importante..."></textarea>
+            </div>
+
+            <!-- Botão -->
+            <div class="text-end">
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+
+        </form>
 
 
                 <!-- Roda-pé -->
