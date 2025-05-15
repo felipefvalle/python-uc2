@@ -96,6 +96,14 @@
         background-color: #084298;
     }
 
+    h1 {
+        font-size: 72px;
+        background: -webkit-linear-gradient(rgb(175, 175, 175), rgb(79, 176, 255));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+
+
     </style>
 
 
@@ -122,8 +130,8 @@
 </head>
 
 <body>
-    <!-- Cabeçalho -->
-    <header class="bg- text-white mt-auto">
+       <!-- Cabeçalho -->
+       <header class="bg- text-white mt-auto">
         <div class="container">
             <div class="row py-4">
                 <div class="col-md-2">
@@ -131,6 +139,10 @@
                         <img src="imgs/logo22.png" alt="" width="150" height="75">
                     </a>
                 </div>
+
+                   <!-- Navbar ---> 
+
+        <!-- Navbar ---> 
 
                 <div class="col-md-8">
                     <form class="d-flex pt-3" role="search">
@@ -146,12 +158,50 @@
                 </div>
 
                 <div class="col-md-2 text-end">
-                    <p class="fs-3 pt-3">
-                        <i class="fa-solid fa-house text-primary"></i>
-                        <i class="bi bi-person-circle icone text-primary"></i>
-                        <i class="bi bi-heart icone text-primary"></i>
-                        <i class="bi bi-bag text-primary"></i>
-                    </p>
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <!-- Container -->  
+                        <div class="container-fluid">
+                        
+                        <!-- Botão -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <!-- Conteúdo  -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item fa-2x">
+                                    <a class="nav-link" href="index.html">
+                                        <i class="fa-solid fa-house"></i></i>
+                                        </a>
+                                </li>
+                                <li class="nav-item fa-2x">
+                                    <a class="nav-link" href="sobre.html">
+                                        <i class="fa-solid fa-earth-americas"></i></i>
+                                        </a>
+                                </li>
+                                <li class="nav-item fa-2x">
+                                    <a class="nav-link" href="produtos.html">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                </li>
+                                <li class="nav-item fa-2x">
+                                    <a class="nav-link" href="form_cadastro.html">
+                                        <i class="fa-solid fa-circle-user"></i></i>
+                                        </a>
+                                </li>
+                                <li class="nav-item fa-2x">
+                                    <a class="nav-link" href="produto.html">
+                                        <i class="fa-solid fa-heart"></i></i></i>
+                                        </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Conteúdo  -->
+            
+                    </nav>
+
+                    
                 </div>
 
             </div>            
