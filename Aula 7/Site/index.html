@@ -1,400 +1,348 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <!-- Meta Tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Loja de Tenis">
-    <meta name="author" content="Equipe de TIC - SENAC">
-
-    <!-- Titulo do Site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DropWatches</title>
-
-    <!-- Favicons --> 
-    <!-- https://realfavicongenerator.net/?spm=a2ty_o01.29997173.0.0.1857c921qtoRb2 --> 
-    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="img/favicon/site.webmanifest" />
-
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Font Awesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Estilos personalizados (opcional) -->
     <style>
-        body {
-            padding: 20px;
-            background-color: rgba(255, 242, 221, 0.178);
-            font-family: "Roboto", sans-serif;
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
         }
-        header {
-            margin-bottom: 20px;
-            background:linear-gradient(135deg,  rgba(82, 143, 255, 0.377), rgba(76, 160, 255, 0.863));
-            border-radius: 15px;
-        }
-        footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            background-color: #f8f9fa;
-        }
-        .icon {
-            margin-right: 8px;
-        }
-
-        .center {
-            text-align: center;
-            font-family: "Roboto", sans-serif;
-            padding: 15px;
-            margin: 15px;
-
-        }
-
-        button[type="submit"] {
-            background-color: #0d6efd;
-            color: white;
-            padding: 10px 20px;
+        
+        .sidebar-card {
             border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            
         }
 
-        button[type="submit"]:hover {
-            background-color: #084298;
+        body {
+            background: linear-gradient(135deg, #d4d4d4, #3d31303a);
+        }
+
+        .main-content {
+            margin-top: 30px;
+        }
+
+
+        .navbar-custom {
+            background: linear-gradient(135deg, #182E59, #069DBF);
+            padding-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 2, 0.3);
+        }
+
+        .navbar-nav .nav-link {
+            margin-left: 1rem;
+            margin-right: 1rem;
         }
 
         h1 {
             font-size: 72px;
-            background: -webkit-linear-gradient(rgb(175, 175, 175), rgb(79, 176, 255));
+            background: -webkit-linear-gradient(#90a9ee, #14407a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        .thead-custom {
+            background: linear-gradient(90deg, #0d6efd, #6610f2) !important;
+            color: white;
+        } 
+        
+        .card {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .btn-primary {
+            background-color: transparent;
+            color: #007bff;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            transition: all 0.2s ease-in-out;
+            font-weight: 500;
+        }
+
+        .btn-primary:hover {
+            background-color: #007bff;
+            color: white;
+            transform: scale(1.03);
+            box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn-success {
+            background-color: transparent;
+            color: #28a745;
+            border: 2px solid #28a745;
+            border-radius: 8px;
+            transition: all 0.2s ease-in-out;
+            font-weight: 500;
+        }
+
+        .btn-success:hover {
+            background-color: #28a745;
+            color: white;
+            transform: scale(1.03);
+            box-shadow: 0 2px 6px rgba(40, 167, 69, 0.3);
+        }
+
+
+
+
+
+
+
 
     </style>
-
-
-    <!-- BASE CSS 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    -->
-
-    <!--  
-    <link href="css/style.css" rel="stylesheet">
-    -->
-
-    <link href="css/estilo.css" rel="stylesheet">
-
-    
-
-	<!-- SPECIFIC CSS 
-    <link href="css/listing.css" rel="stylesheet">
-    -->
-
-    <!-- YOUR CUSTOM CSS 
-    <link href="css/custom.css" rel="stylesheet">
-    -->
-
 </head>
 
 <body>
-    <!-- Cabeçalho -->
-    <header class="bg- text-white mt-auto">
-        <div class="container">
-            <div class="row py-4">
-                <div class="col-md-2">
-                    <a href="index.html">
-                        <img src="imgs/logo22.png" alt="" width="150" height="75">
+
+
+    <header>
+
+        <!-- Navbar -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="imgs/logo22.png" alt="" width="100" height="85">
                     </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Home -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <!-- Sobre -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html"><i class="fa-solid fa-users"></i> Sobre </a>
+                        </li>
+                        <!-- Produtos -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html"><i class="fa-solid fa-cart-shopping"></i> Produtos </a>
+                        </li>
+                        <!-- Cadastro -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html"><i class="fa-solid fa-circle-user"></i> Cadastro </a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+        </nav>
 
-                   <!-- Navbar ---> 
-
-        <!-- Navbar ---> 
-
-                <div class="col-md-8">
-                    <form class="d-flex pt-3" role="search">
-                        <div class="input-group">
-                            <input class="form-control me-2" type="search" data-bs-toggle="quicksearch"
-                                placeholder="Qual o modelo que você procura?" aria-label="Pesquisar">
-                                
-                            <button class="btn btn-outline-secondary" type="submit">
-                                <i class="bi bi-search"></i> <!-- Ícone Bootstrap [[6]] -->
-                            </button>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="col-md-2 text-end">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <!-- Container -->  
-                        <div class="container-fluid">
-                        
-                        <!-- Botão -->
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        
-                        <!-- Conteúdo  -->
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item fa-2x">
-                                    <a class="nav-link" href="index.html">
-                                        <i class="fa-solid fa-house"></i></i>
-                                        </a>
-                                </li>
-                                <li class="nav-item fa-2x">
-                                    <a class="nav-link" href="sobre.html">
-                                        <i class="fa-solid fa-earth-americas"></i></i>
-                                        </a>
-                                </li>
-                                <li class="nav-item fa-2x">
-                                    <a class="nav-link" href="produtos.html">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                </li>
-                                <li class="nav-item fa-2x">
-                                    <a class="nav-link" href="form_cadastro.html">
-                                        <i class="fa-solid fa-circle-user"></i></i>
-                                        </a>
-                                </li>
-                                <li class="nav-item fa-2x">
-                                    <a class="nav-link" href="produto.html">
-                                        <i class="fa-solid fa-heart"></i></i></i>
-                                        </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Conteúdo  -->
-            
-                    </nav>
-
-                    
-                </div>
-
-            </div>            
-        </div>
     </header>
 
-    <!-- Main -->
     <main>
-        
 
-        <div class="center">
-            <br>
-            <h1 style="color: black; font-size: 50px;">Bem-vindo à DropWatches</h1>
-            <!-- <p style="font-size: 22px;">Navegue pelo menu para conhecer nossos produtos e serviços.</p> -->
-        </div>
- 
-        
-        <section class="mt-5">
-            <h2>Destaques</h2>
-            <div class="row">
-
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="imgs/relogio1.jpg" class="card-img-top" alt="Produto 1"
-                        width="300px"
-                        height="250px">
-                        <div class="card-body">
-                            <h5 class="card-title">Produto em Destaque</h5>
-                            <p class="card-text">Novo S10 MAX IWO SmartWatch 9</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="imgs/relogio3.jpg" class="card-img-top" alt="Produto 2"
-                        width="300px"
-                        height="250px">
-                        <div class="card-body">
-                            <h5 class="card-title">Oferta Especial</h5>
-                            <p class="card-text">Amazfit GTS 4 Mini Relógio Inteligente</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="imgs/relogio2.jpg" class="card-img-top" alt="Produto 3"
-                        width="300px"
-                        height="250px">
-                        <div class="card-body">
-                            <h5 class="card-title">Novidade</h5>
-                            <p class="card-text">Smartwatch Multi G2R GPS Proteção IP67 Preto.</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Mensagem de Boas Vindas -->
+        <section class="d-flex justify-content-center align-items-center p-5 bg-light">
+            <div class="text-center">
+                <h1 class="display-4 text-dark fw-bold">Bem-vindo à DropWatches</h1>
+                <p class="lead text-secondary">Navegue pelo menu para conhecer nossos produtos e serviços.</p>
             </div>
         </section>
 
 
-        <!-- Container da Tabela -->
-        <div class="table-responsive-lg">
+        <!-- Seção de Destaques -->
+        <section class="mt-5">
+            <div class="container">
+                <h2 class="mb-4">Destaques</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow rounded">
+                            <img src="imgs/relogio2.jpg" class="card-img-top img-fluid" alt="Produto 1" style="height: 250px; object-fit: contain;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">MAX IWO SmartWatch 9</h5>
+                                <p class="card-text">O MAX IWO SmartWatch é ideal para quem deseja praticidade e desempenho no dia a dia.</p>
+                                <div class="d-grid gap-2">
+                                    <a href="produto.html" class="btn btn-sm btn-primary">Ver Produto</a>
+                                    <button class="btn btn-sm btn-success" title="Adicionar ao Carrinho">
+                                        <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Tabela -->
-            <table class="table table-hover align-middle shadow">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow rounded">
+                            <img src="imgs/relogio1.jpg" class="card-img-top img-fluid" alt="Produto 1" style="height: 250px; object-fit: contain;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">NeoPulse X7</h5>
+                                <p class="card-text">O NeoPulse X7 combina design sofisticado com tecnologia de ponta</p>
+                                <div class="d-grid gap-2">
+                                    <a href="produto.html" class="btn btn-sm btn-primary">Ver Produto</a>
+                                    <button class="btn btn-sm btn-success" title="Adicionar ao Carrinho">
+                                        <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow rounded">
+                            <img src="imgs/relogio6.jpg" class="card-img-top img-fluid" alt="Produto 1" style="height: 250px; object-fit: contain;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">VitaWatch Pro</h5>
+                                <p class="card-text">O VitaWatch Pro foi desenvolvido para acompanhar você em todas as jornadas.</p>
+                                <div class="d-grid gap-2">
+                                    <a href="produto.html" class="btn btn-sm btn-primary">Ver Produto</a>
+                                    <button class="btn btn-sm btn-success" title="Adicionar ao Carrinho">
+                                        <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <!-- Container da Tabela -->
+            <div class="table-responsive-lg">
+
+                <!-- Tabela -->
+                <table class="table table-hover align-middle shadow rounded overflow-hidden">
+            
                 <!-- Cabeçalho -->   
-                <thead class="table-primary">
-                    <tr>
-                        <th scope="col" style="width: 15%">Foto</th>
-                        <th scope="col" style="width: 55%">Descrição</th>
-                        <th scope="col" style="width: 30%">Valor</th>
+                <thead class="bg-gradient text-white" style="background: linear-gradient(90deg, #0d6efd, #6610f2);">
+                    <tr class="text-center">
+                    <th scope="col" style="width: 20%">Foto</th>
+                    <th scope="col" style="width: 40%">Descrição</th>
+                    <th scope="col" style="width: 20%">Valor</th>
+                    <th scope="col" style="width: 20%">Ações</th>
                     </tr>
                 </thead>
-                
+            
                 <!-- Corpo -->
                 <tbody>
-                    
                     <!-- Item 1 -->
-                    <tr class="table-light">
-                        <td>
-                            <img src="imgs/relogio-motorola.png" 
-                                 class="img-thumbnail img-tenis" 
-                                 alt="Relogio Motorola"
-                                 width="300px"
-                                 height="250px">
-                        </td>
-                        <td>
-                            <h5 class="mb-1">Motorola, Smartwatch Moto Watch 120, Preto</h5>
-                            <ul class="list-unstyled">
-                                <li><small>Cor: Preto</small></li>
-                                <li><small>Material: Couro premium</small></li>
-                                <li><span class="badge bg-success">Disponível</span></li>
-                            </ul>
-                        </td>
-                        <td>
-                            <span class="text-success fw-bold">R$ 899,90</span>
-                            <del class="text-muted d-block">R$ 1.099,90</del>
-                        </td>
+                    <tr class="bg-white border rounded-3 shadow-sm">
+                    <td class="text-center align-middle">
+                        <img src="imgs/relogio-motorola.png" 
+                            class="img-fluid rounded-4 border border-2 shadow-sm" 
+                            alt="Relógio Motorola"
+                            style="max-width: 200px;">
+                    </td>
+                    <td>
+                        <h5 class="mb-2 fw-bold">Motorola, Smartwatch Moto Watch 120, Preto <span class="badge bg-warning text-dark ms-2">Novo</span></h5>
+                        <ul class="list-unstyled text-muted">
+                        <li><small><strong>Cor:</strong> Preto</small></li>
+                        <li><small><strong>Material:</strong> Titânio</small></li>
+                        <li><span class="badge bg-success">Disponível</span></li>
+                        </ul>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span class="text-success fw-bold fs-5">R$ 899,90</span>
+                        <del class="text-muted d-block">R$ 1.099,90</del>
+                    </td>
+                    <td class="text-center align-middle">
+                        <div class="d-flex justify-content-center gap-2">
+                        <a href="produto.html" class="btn btn-sm btn-outline-primary px-3 py-2 fw-semibold shadow-sm" title="Ver Produto">
+                            <i class="fas fa-eye me-1"></i> Ver
+                        </a>
+                        <button class="btn btn-sm btn-outline-success px-3 py-2 fw-semibold shadow-sm" title="Adicionar ao Carrinho">
+                            <i class="fas fa-cart-plus me-1"></i> Comprar
+                        </button>
+                        </div>
+                    </td>
                     </tr>
-
+            
                     <!-- Item 2 -->
-                    <tr class="table-light">
-                        <td>
-                            <img src="imgs/relogio-motorola2.jpg" 
-                                 class="img-thumbnail img-tenis" 
-                                 alt="SmartWatch Moto Watch"
-                                 width="300px"
-                                 height="250px">
-                        </td>
-                        <td>
-                            <h5 class="mb-1">Motorola Moto Watch 120</h5>
-                            <ul class="list-unstyled">
-                                <li><small>Cor: Preto/Branco</small></li>
-                                <li><small>Característica: Shell toe</small></li>
-                                <li><span class="badge bg-warning text-dark">Últimas unidades</span></li>
-                            </ul>
-                        </td>
-                        <td>
-                            <span class="text-success fw-bold">R$ 799,90</span>
-                            <div class="mt-1">
-                                <small class="text-muted">ou 10x R$ 49,99</small>
-                            </div>
-                        </td>
+                    <tr class="bg-white border rounded-3 shadow-sm">
+                    <td class="text-center align-middle">
+                        <img src="imgs/relogio4_600x600.jpeg" 
+                            class="img-fluid rounded-4 border border-2 shadow-sm" 
+                            alt="Relógio Xiaomi"
+                            style="max-width: 200px;">
+                    </td>
+                    <td>
+                        <h5 class="mb-2 fw-bold">Xiaomi Mi Watch Lite, Pulseira Silicone <span class="badge bg-info text-dark ms-2">Promoção</span></h5>
+                        <ul class="list-unstyled text-muted">
+                        <li><small><strong>Cor:</strong> Azul</small></li>
+                        <li><small><strong>GPS:</strong> Integrado</small></li>
+                        <li><span class="badge bg-success">Disponível</span></li>
+                        </ul>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span class="text-success fw-bold fs-5">R$ 499,90</span>
+                        <del class="text-muted d-block">R$ 699,90</del>
+                    </td>
+                    <td class="text-center align-middle">
+                        <div class="d-flex justify-content-center gap-2">
+                        <a href="produto.html" class="btn btn-sm btn-outline-primary px-3 py-2 fw-semibold shadow-sm" title="Ver Produto">
+                            <i class="fas fa-eye me-1"></i> Ver
+                        </a>
+                        <button class="btn btn-sm btn-outline-success px-3 py-2 fw-semibold shadow-sm" title="Adicionar ao Carrinho">
+                            <i class="fas fa-cart-plus me-1"></i> Comprar
+                        </button>
+                        </div>
+                    </td>
                     </tr>
-
+            
                     <!-- Item 3 -->
-
-                    <tr class="table-light">
-                        <td>
-                            <img src="imgs/relogio5.jpg" 
-                                 class="img-thumbnail img-tenis" 
-                                 alt="SmartWatch"
-                                 width="300px"
-                                 height="250px">
-                        </td>
-                        <td>
-                            <h5 class="mb-1">Smartwatch Bluetooth D20 1.3" 150mAh </h5>
-                            <ul class="list-unstyled">
-                                <li><small>Cor: Preto</small></li>
-                                <li><small>Material: Couro premium</small></li>
-                                <li><span class="badge bg-success">Disponível</span></li>
-                            </ul>
-                        </td>
-                        <td>
-                            <span class="text-success fw-bold">R$ 499,90</span>
-                            <del class="text-muted d-block">R$ 699,90</del>
-                        </td>
+                    <tr class="bg-white border rounded-3 shadow-sm">
+                    <td class="text-center align-middle">
+                        <img src="imgs/relogio8.jpg" 
+                            class="img-fluid rounded-4 border border-2 shadow-sm" 
+                            alt="Relógio Samsung"
+                            style="max-width: 200px;">
+                    </td>
+                    <td>
+                        <h5 class="mb-2 fw-bold">Samsung Galaxy Watch 4, Monitoramento Avançado</h5>
+                        <ul class="list-unstyled text-muted">
+                        <li><small><strong>Cor:</strong> Prata</small></li>
+                        <li><small><strong>Monitoramento:</strong> Pressão, Sono, Frequência Cardíaca</small></li>
+                        <li><span class="badge bg-danger">Esgotado</span></li>
+                        </ul>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span class="text-muted fw-bold fs-5">R$ 1.299,00</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <div class="d-flex justify-content-center gap-2">
+                        <a href="produto.html" class="btn btn-sm btn-outline-primary px-3 py-2 fw-semibold shadow-sm" title="Ver Produto">
+                            <i class="fas fa-eye me-1"></i> Ver
+                        </a>
+                        <button class="btn btn-sm btn-outline-secondary px-3 py-2 fw-semibold shadow-sm" title="Indisponível" disabled>
+                            <i class="fas fa-cart-plus me-1"></i> Comprar
+                        </button>
+                        </div>
+                    </td>
                     </tr>
-                    
+            
                 </tbody>
-                
-                <!-- Roda-pé -->
-                <tfoot class="table-secondary">
-                    <tr>
-                        <td colspan="3" class="text-center small">
-                            * Preços válidos até 30/08/2025 | Frete grátis para compras acima de R$ 300,00
-                        </td>
-                    </tr>
-                </tfoot>
+                </table>
+            </div>
+            
+            
+        </section>
 
-            </table>
-            <!-- Tabela -->
 
-        </div>
+
     </main>
-    <!-- Main -->
 
     <!-- Footer -->
-    <footer class="bg-dark text-white mt-auto">
-        <!-- Div Container -->
+    <footer class="bg-dark text-white mt-5">
         <div class="container py-4">
-            <!-- Div Linha -->
-            <div class="row">
-
-                <!-- Coluna - Links Rápidos -->
-                <div class="col-md-2  mb-3">
-                    <p>Links Rápidos</p>
-                    <nav class="nav flex-column ">
-                        <a class="nav-link text-white py-1" href="#">Sobre nós</a>
-                        <a class="nav-link text-white py-1" href="#">Faq</a>
-                        <a class="nav-link text-white py-1" href="#">Ajuda</a>
-                        <a class="nav-link text-white py-1" href="#">Meu Acesso</a>
-                        <a class="nav-link text-white py-1" href="#">Blog</a>
-                        <a class="nav-link text-white py-1" href="#">Contato</a>
-                    </nav>
-                </div>
-
-                <!-- Coluna - Contatos -->
-                <div class="col-md-2">
-                    <p>Contatos</p>
-                    <p><i class="fa-solid fa-headset"></i> +55 (24) 2233-4455</p>
-                    <p><i class="fa-solid fa-envelope"></i> 
-                        <a href="mailto:contato@tenis.github.io" class="text-white">
-                            contato@tenis.github.io
-                        </a>
-                    </p>
-                </div>
-                
-                <!-- Outras colunas do rodapé (opcional) -->
-                <div class="col-md-8">
-                    <p class="text-end mb-0"></p>
-                </div>
-
-            </div>
-            <!-- Div Linha -->
-
-            <hr/>
-
-            <div class="row">
+            <div class="row justify-content-center text-center">
                 <!-- Coluna - Idioma -->
-                <div class="col-md-2  mb-3">
-
+                <div class="col-md-2 mb-3">
                     <select class="form-select form-select-sm text-white bg-dark" aria-label="Default select idioma">
                         <option value="Portuges" selected>Portugues</option>
                         <option value="English">English</option>
@@ -402,39 +350,69 @@
                         <option value="Spanish">Spanish</option>
                         <option value="Russian">Russian</option>
                     </select>
-                
                 </div>
                 <!-- Coluna - Idioma -->
 
+                <!-- Redes Sociais Centralizadas -->
+                <div class="col-md-4 mb-3">
+                    <h5>Redes Sociais</h5>
+                    <ul class="list-unstyled small">
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fab fa-instagram me-2"></i> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fab fa-facebook me-2"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fab fa-github me-2"></i> GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fab fa-x-twitter me-2"></i> X
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <!-- Coluna - Moeda -->
-                <div class="col-md-1  mb-3">                
+                <div class="col-md-2 mb-3">
                     <select class="form-select form-select-sm text-white bg-dark" aria-label="Default select moeda">
                         <option value="Real" selected>Real</option>
                         <option value="US Dollars">US Dollars</option>
                         <option value="Euro">Euro</option>
-                    </select>    
+                    </select>
                 </div>
-                 <!-- Coluna - Moeda -->
+                <!-- Coluna - Moeda -->
 
-                <!-- Coluna - Links Rápidos -->
-                <div class="col-md-9  mb-3">
-                    <p class="text-end text-black-50 mb-0">
+                <!-- Termos e Privacidade -->
+                <div class="col-md-12 mb-3">
+                    <p class="text-center text-black-50 mb-0">
                         <a href="#" class="text-white">Termos e condições</a> |
-                        <a href="#" class="text-white">Privacidade</a> |
-                        <span class="text-white">© 2025 SENAC - RJ</span>
+                        <a href="#" class="text-white">Privacidade</a>
                     </p>
                 </div>
-
             </div>
 
+            <div class="text-center mt-3 pt-3 border-top">
+                <p class="small mb-0">&copy; 2025 DropWatches - Todos os direitos reservados.</p>
+            </div>
         </div>
-        <!-- Div Container -->
     </footer>
-    <!-- Footer -->
-    
-	
+
+
+
     <!-- Bootstrap JS e dependências -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+
+
+

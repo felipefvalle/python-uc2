@@ -1,264 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <!-- Meta Tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Loja de Tenis">
-    <meta name="author" content="Equipe de TIC - SENAC">
-
-    <!-- Titulo do Site -->
-    <title>DropWatches</title>
-
-    <!-- Favicons --> 
-    <!-- https://realfavicongenerator.net/?spm=a2ty_o01.29997173.0.0.1857c921qtoRb2 --> 
-    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="img/favicon/site.webmanifest" />
-    
-    <!-- GOOGLE WEB FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropWatches - Produto</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font Awesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- Estilos personalizados (opcional) -->
     <style>
         body {
-        font-family: "Roboto", sans-serif;
-        background-color: #f2f2f2;
-        padding: 20px;
-    }
-
-    header {
-        margin-bottom: 30px;
-        background: linear-gradient(135deg, rgba(82, 143, 255, 0.377), rgba(76, 160, 255, 0.863));
-        border-radius: 15px;
-    }
-
-
-    .sobre-nos {
-        text-align: center;
-        margin: 40px 0;
-    }
-
-    .sobre-nos h1 {
-        font-size: 2.5rem;
-
-    }
-
-    .sobre-nos p {
-        font-size: 1.1rem;
-        color: #555;
-        line-height: 1.6;
-    }
-
-    footer {
-        margin-top: 60px;
-        background-color: #e9ecef;
-        padding: 30px 0;
-    }
-
-
-    /* Botão */
-    button[type="submit"] {
-        background-color: #0d6efd;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    button[type="submit"]:hover {
-        background-color: #084298;
-    }
-
-    h1 {
-        padding: 5px;
-        margin: 50px;
-        font-size: 92px;
-        background: -webkit-linear-gradient(rgb(175, 175, 175), rgb(79, 176, 255));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+            background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+            font-family: 'Segoe UI', sans-serif;
         }
 
+        .navbar-custom {
+            background: linear-gradient(135deg, #182E59, #069DBF);
+            padding: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 2, 0.3);
+        }
+
+        .navbar-nav .nav-link {
+            margin: 0 1rem;
+            font-weight: 500;
+        }
+
+        .produto-imagem {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .preco {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        .btn-comprar {
+            background-color: #069DBF;
+            color: #fff;
+            border: 2px solid transparent;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-comprar:hover {
+            background-color: #fff;
+            color: #069DBF;
+            border: 2px solid #069DBF;
+        }
+
+        .avaliacoes {
+            margin-top: 3rem;
+        }
+
+        .avaliacao {
+            background-color: #ffffff;
+            padding: 1.2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .estrela {
+            color: #f2b01e;
+        }
+
+        .sobre-nos {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+        }
+
+        .sobre-nos h1 {
+            font-size: 52px;
+            background: -webkit-linear-gradient(#90a9ee, #14407a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;    
+        }
+
+        .sobre-nos p {
+            color: #333;
+            line-height: 1.6;
+        }
 
     </style>
-
-
-    <!-- BASE CSS 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    -->
-
-    <!--  
-    <link href="css/style.css" rel="stylesheet">
-    -->
-
-    <link href="css/estilo.css" rel="stylesheet">
-
-    
-
-	<!-- SPECIFIC CSS 
-    <link href="css/listing.css" rel="stylesheet">
-    -->
-
-    <!-- YOUR CUSTOM CSS 
-    <link href="css/custom.css" rel="stylesheet">
-    -->
-
 </head>
 
 <body>
-     <!-- Cabeçalho -->
-     <header class="bg- text-white mt-auto">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <div class="container">
-            <div class="row py-4">
-                <div class="col-md-2">
-                    <a href="index.html">
-                        <img src="imgs/logo22.png" alt="" width="150" height="75">
-                    </a>
-                </div>
-
-                   <!-- Navbar ---> 
-
-        <!-- Navbar ---> 
-
-                <div class="col-md-8">
-                    <form class="d-flex pt-3" role="search">
-                        <div class="input-group">
-                            <input class="form-control me-2" type="search" data-bs-toggle="quicksearch"
-                                placeholder="Qual o modelo que você procura?" aria-label="Pesquisar">
-                                
-                            <button class="btn btn-outline-secondary" type="submit">
-                                <i class="bi bi-search"></i> <!-- Ícone Bootstrap [[6]] -->
-                            </button>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="col-md-2 text-end">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <!-- Container -->  
-                        <div class="container-fluid">
-                        
-                        <!-- Botão -->
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        
-                        <!-- Conteúdo  -->
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item fa-2x">
-                                    <a class="nav-link" href="index.html">
-                                        <i class="fa-solid fa-house"></i></i>
-                                        </a>
-                                </li>
-                                <li class="nav-item fa-2x">
-                                    <a class="nav-link" href="sobre.html">
-                                        <i class="fa-solid fa-earth-americas"></i></i>
-                                        </a>
-                                </li>
-                                <li class="nav-item fa-2x">
-                                    <a class="nav-link" href="produtos.html">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                </li>
-                                <li class="nav-item fa-2x">
-                                    <a class="nav-link" href="form_cadastro.html">
-                                        <i class="fa-solid fa-circle-user"></i></i>
-                                        </a>
-                                </li>
-                                <li class="nav-item fa-2x">
-                                    <a class="nav-link" href="produto.html">
-                                        <i class="fa-solid fa-heart"></i></i></i>
-                                        </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Conteúdo  -->
-            
-                    </nav>
-                    
-                </div>
-
-            </div>            
+            <a class="navbar-brand" href="index.html">
+                <img src="imgs/logo22.png" alt="Logo DropWatches" width="100" height="85">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html"><i class="fa-solid fa-users"></i> Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produtos.html"><i class="fa-solid fa-cart-shopping"></i> Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html"><i class="fa-solid fa-circle-user"></i> Cadastro</a></li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Main -->
-    <main class="container bg-white p-4 rounded shadow mb-3">
-        <div class="sobre-nos">
-            <h1 class="mt-2">Sobre a DropWatches</h1>
-            <p>A DropWatches é uma marca inovadora de smartwatches, projetada para aqueles que buscam qualidade, estilo e tecnologia em um único produto. Com um design sofisticado e funcionalidades de última geração, nossos relógios inteligentes foram criados para acompanhar você no seu dia a dia, seja em atividades físicas, negócios ou lazer.</p>
-            <p>Nosso compromisso é com a satisfação dos nossos clientes, oferecendo produtos que aliam praticidade e elegância. Todos os nossos smartwatches possuem monitoramento de saúde, notificações inteligentes, e integração com seu smartphone para uma experiência completa. </p>
-            <p>Na DropWatches, acreditamos que a tecnologia deve ser acessível e intuitiva, por isso, nossos produtos são projetados para proporcionar a melhor experiência possível em qualquer situação.</p>
-        </div>
+    <!-- Conteúdo principal -->
+    <main class="container my-5">
+        <div class="sobre-nos container py-5">
+            <h1 class="mb-4 text-center fw-bold">Sobre a DropWatches</h1>
+          
+            <p class="fs-5">
+              Na <strong>DropWatches</strong>, unimos design sofisticado, tecnologia de ponta e praticidade em um único acessório: o smartwatch. Nossa missão é oferecer produtos que se encaixem perfeitamente na sua rotina, seja no treino, no trabalho ou nos momentos de lazer.
+            </p>
+          
+            <p class="fs-5">
+              Cada detalhe dos nossos relógios inteligentes é pensado para proporcionar mais funcionalidade e estilo ao seu dia. Com recursos como <strong>monitoramento de saúde</strong>, <strong>notificações inteligentes</strong> e integração completa com seu smartphone, garantimos uma experiência conectada, intuitiva e eficiente.
+            </p>
+          
+            <p class="fs-5">
+              Acreditamos que a tecnologia deve ser <strong>acessível, elegante e simples de usar</strong>. Por isso, nossos produtos são desenvolvidos para acompanhar você com desempenho e personalidade, onde quer que vá.
+            </p>
+          
+            <p class="fs-5 mb-0">
+              Seja bem-vindo à nova geração de smartwatches. Seja bem-vindo à <strong>DropWatches</strong>.
+            </p>
+          </div>
+          
+
+
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white mt-auto">
-        <!-- Div Container -->
+     <!-- Footer -->
+     <footer class="bg-dark text-white mt-5">
         <div class="container py-4">
-            <!-- Div Linha -->
-            <div class="row">
-
-                <!-- Coluna - Links Rápidos -->
-                <div class="col-md-2  mb-3">
-                    <p>Links Rápidos</p>
-                    <nav class="nav flex-column ">
-                        <a class="nav-link text-white py-1" href="#">Sobre nós</a>
-                        <a class="nav-link text-white py-1" href="#">Faq</a>
-                        <a class="nav-link text-white py-1" href="#">Ajuda</a>
-                        <a class="nav-link text-white py-1" href="#">Meu Acesso</a>
-                        <a class="nav-link text-white py-1" href="#">Blog</a>
-                        <a class="nav-link text-white py-1" href="#">Contato</a>
-                    </nav>
-                </div>
-
-                <!-- Coluna - Contatos -->
-                <div class="col-md-2">
-                    <p>Contatos</p>
-                    <p><i class="fa-solid fa-headset"></i> +55 (24) 2233-4455</p>
-                    <p><i class="fa-solid fa-envelope"></i> 
-                        <a href="mailto:contato@tenis.github.io" class="text-white">
-                            contato@tenis.github.io
-                        </a>
-                    </p>
-                </div>
-                
-                <!-- Outras colunas do rodapé (opcional) -->
-                <div class="col-md-8">
-                    <p class="text-end mb-0"></p>
-                </div>
-
-            </div>
-            <!-- Div Linha -->
-
-            <hr/>
-
-            <div class="row">
+            <div class="row justify-content-center text-center">
                 <!-- Coluna - Idioma -->
-                <div class="col-md-2  mb-3">
-
+                <div class="col-md-2 mb-3">
                     <select class="form-select form-select-sm text-white bg-dark" aria-label="Default select idioma">
                         <option value="Portuges" selected>Portugues</option>
                         <option value="English">English</option>
@@ -266,42 +158,63 @@
                         <option value="Spanish">Spanish</option>
                         <option value="Russian">Russian</option>
                     </select>
-                
                 </div>
                 <!-- Coluna - Idioma -->
 
+                <!-- Redes Sociais Centralizadas -->
+                <div class="col-md-4 mb-3">
+                    <h5>Redes Sociais</h5>
+                    <ul class="list-unstyled small">
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fab fa-instagram me-2"></i> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fab fa-facebook me-2"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fab fa-github me-2"></i> GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">
+                                <i class="fab fa-x-twitter me-2"></i> X
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <!-- Coluna - Moeda -->
-                <div class="col-md-1  mb-3">                
+                <div class="col-md-2 mb-3">
                     <select class="form-select form-select-sm text-white bg-dark" aria-label="Default select moeda">
                         <option value="Real" selected>Real</option>
                         <option value="US Dollars">US Dollars</option>
                         <option value="Euro">Euro</option>
-                    </select>    
+                    </select>
                 </div>
-                 <!-- Coluna - Moeda -->
+                <!-- Coluna - Moeda -->
 
-                <!-- Coluna - Links Rápidos -->
-                <div class="col-md-9  mb-3">
-                    <p class="text-end text-black-50 mb-0">
+                <!-- Termos e Privacidade -->
+                <div class="col-md-12 mb-3">
+                    <p class="text-center text-black-50 mb-0">
                         <a href="#" class="text-white">Termos e condições</a> |
-                        <a href="#" class="text-white">Privacidade</a> |
-                        <span class="text-white">© 2025 SENAC - RJ</span>
+                        <a href="#" class="text-white">Privacidade</a>
                     </p>
                 </div>
-
             </div>
 
-
-
-
+            <div class="text-center mt-3 pt-3 border-top">
+                <p class="small mb-0">&copy; 2025 DropWatches - Todos os direitos reservados.</p>
+            </div>
         </div>
-        <!-- Div Container -->
     </footer>
-    <!-- Footer -->
-    
-	
-    <!-- Bootstrap JS e dependências -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
